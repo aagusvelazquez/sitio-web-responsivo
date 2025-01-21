@@ -11,13 +11,13 @@
     <!-- BOXICON -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- DESLIZADOR CSS -->
-    <link rel="stylesheet" href="">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 
-    <title>Sitio Web Inmobiliario Responsivo - Agus Velazquez</title>
+    <title>InmoVista - Tu Futuro Hogar a un click</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                Houses <i class='bx bxs-home-alt-2'></i>
+                InmoVista <i class='bx bxs-home-alt-2'></i>
             </a>
 
             <div class="nav__menu">
@@ -135,7 +135,7 @@
                 <div class="logos__img">
                     <img src="./assets/img/logo3.png" alt="">
                 </div>
-                
+
                 <div class="logos__img">
                     <img src="./assets/img/logo4.png" alt="">
                 </div>
@@ -151,9 +151,10 @@
                     Residencias Populares<span>.</span>
                 </h2>
 
-                <div class="popular__container">
-                    <div>
-                        <article class="popular__card">
+                <div class="popular__container swiper">
+
+                    <div class="swiper-wrapper">
+                        <article class="popular__card swiper-slide">
                             <img src="./assets/img/popular1.png" alt="" class="popular__img">
 
                             <div class="popular__data">
@@ -170,7 +171,7 @@
                             </div>
                         </article>
 
-                        <article class="popular__card">
+                        <article class="popular__card swiper-slide">
                             <img src="./assets/img/popular2.png" alt="" class="popular__img">
 
                             <div class="popular__data">
@@ -187,7 +188,7 @@
                             </div>
                         </article>
 
-                        <article class="popular__card">
+                        <article class="popular__card swiper-slide">
                             <img src="./assets/img/popular3.png" alt="" class="popular__img">
 
                             <div class="popular__data">
@@ -204,7 +205,7 @@
                             </div>
                         </article>
 
-                        <article class="popular__card">
+                        <article class="popular__card swiper-slide">
                             <img src="./assets/img/popular4.png" alt="" class="popular__img">
 
                             <div class="popular__data">
@@ -221,7 +222,7 @@
                             </div>
                         </article>
 
-                        <article class="popular__card">
+                        <article class="popular__card swiper-slide">
                             <img src="./assets/img/popular5.png" alt="" class="popular__img">
 
                             <div class="popular__data">
@@ -238,12 +239,129 @@
                             </div>
                         </article>
                     </div>
+
+                    <div class="swiper-button-next">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bx-chevron-left' ></i>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- VALOR -->
         <section class="value ection" id="value">
+            <div class="value__container container grid">
+                <div class="values__images">
+                    <div class="value__orbe"></div>
+
+                    <div class="value__img">
+                        <img src="assets/img/valor.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="value__content">
+                    <div class="value__data">
+                        <span class="section__subtitle">Nuestro Valor</span>
+                        <h2 class="section__title">
+                            Valor que te damos<span>.</span>
+                        </h2>
+                        <p class="value__description">
+                            Siempre estamos listos para ayudar brindando el mejor servicio.
+                            Creemos que un buen lugar para vivir puede mejorar su vida.
+                        </p>
+                    </div>
+
+                    <div class="value__accordion">
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bxs-shield-x value__accordion-icon'></i>
+                                <h3 class="value__accordion-title">
+                                    Las mejores tasas de interés del mercado.
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <i class='bx bxs-down-arrow' ></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    El precio que ofrecemos es el mejor para usted,
+                                    garantizamos que no habrá cambios de precio en su propiedad debido
+                                    a diversos costos inesperados que pueden surgir.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bxs-x-square value__accordion-icon' ></i>
+                                <h3 class="value__accordion-title">
+                                    Prevenir precios inestables
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <i class='bx bxs-down-arrow' ></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    El precio que ofrecemos es el mejor para usted,
+                                    garantizamos que no habrá cambios de precio en su propiedad debido
+                                    a diversos costos inesperados que pueden surgir.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bxs-bar-chart-square value__accordion-icon' ></i>
+                                <h3 class="value__accordion-title">
+                                    Los mejores precios del mercado.
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <i class='bx bxs-down-arrow' ></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    El precio que ofrecemos es el mejor para usted,
+                                    garantizamos que no habrá cambios de precio en su propiedad debido
+                                    a diversos costos inesperados que pueden surgir.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="value__accordion-item">
+                            <header class="value__accordion-header">
+                                <i class='bx bxs-check-square value__accordion-icon' ></i>
+                                <h3 class="value__accordion-title">
+                                    Seguridad de tus datos
+                                </h3>
+                                <div class="value__accordion-arrow">
+                                    <i class='bx bxs-down-arrow' ></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordion-content">
+                                <p class="value__accordion-description">
+                                    El precio que ofrecemos es el mejor para usted,
+                                    garantizamos que no habrá cambios de precio en su propiedad debido
+                                    a diversos costos inesperados que pueden surgir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact ection" id="contact">
+
+        </section>
+
+        <!-- SUBSCRIBE -->
+        <section class="subscribe ection">
 
         </section>
     </main>
@@ -256,11 +374,11 @@
     <!-- SCROLL UP -->
 
 
-    <!-- DESPLAZAMIENTO SCROLL -->
+    <!-- SCROLLREVEAL -->
     <script src=""></script>
 
     <!-- SWIPER JS -->
-    <script src=""></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!-- MAIN JS -->
     <script src="./assets/js/main.js"></script>
