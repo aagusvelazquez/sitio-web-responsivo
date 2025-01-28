@@ -68,6 +68,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    transition: .3s; /* Para la animación con el tema oscuro */
 }
 
 h1,h2,h3 {
@@ -95,16 +96,81 @@ input, button {
 }
 
 /*=============== TEMA ===============*/
+.change-theme {
+    font-size: 1.25rem;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
 
+.change-theme:hover {
+    color: var(--first-color);
+}
 
 /*=============== Variables Tema Oscuro ===============*/
-
+body.dark-theme {
+    /* Colores en modo HSL(hue, saturation, lightness) */
+    --first-color: hsl(228, 66%, 62%);
+    --second-color: hsl(25, 57%, 54%);
+    --title-color: hsl(228, 8%, 95%);
+    --text-color: hsl(228, 8%, 70%);
+    --border-color: hsl(228, 16%, 14%);
+    --body-color: hsl(228, 12%, 8%);
+    --container-color: hsl(228, 16%, 12%);
+}
 
 /* 
 *   El color cambiará en algunas partes
 *   del sitio web, en el tema oscuro
 */
+.dark-theme .home__search,
+.dark-theme .swiper-button-next,
+.dark-theme .swiper-button-prev {
+    border: 3px solid var(--border-color);
+}
 
+.dark-theme .nav__menu,
+.dark-theme .home__img,
+.dark-theme .popular__card:hover,
+.dark-theme .value__img,
+.dark-theme .accordion-open,
+.dark-theme .accordion-open .value__accordion-icon,
+.dark-theme .accordion-open .value__accordion-arrow,
+.dark-theme .contact__img,
+.dark-theme .contact__card-box:hover,
+.dark-theme .scrollup {
+    box-shadow: none;
+}
+
+.dark-theme .value__orbe,
+.dark-theme .value__accordion-icon,
+.dark-theme .value__accordion-arrow,
+.dark-theme .contact__orbe,
+.dark-theme .contact__card i,
+.dark-theme .contact__card-button,
+.dark-theme .subscribe__container {
+    background-color: var(--container-color);
+}
+
+.dark-theme .subscribe__container {
+    border: 6px solid var(--border-color);
+}
+
+.dark-theme .subscribe__description {
+    color: var(--text-color);
+}
+
+.dark-theme::-webkit-scrollbar{
+    background-color: hsl(228, 4%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+    background-color: hsl(228, 4%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(228, 4%, 35%);
+}
 
 /*=============== CLASES REUTILIZABLES ===============*/
 .container {
@@ -148,7 +214,7 @@ input, button {
     width: 100%;
     background-color: transparent;
     z-index: var(--z-fixed);
-    transition: .4s;
+    transition: .4s; /* Para la animación del tema oscuro */
 }
 
 .nav {
@@ -220,6 +286,10 @@ input, button {
 
 .scroll-header .nav__logo {
     color: var(--first-color);
+}
+
+.scroll-header .change-theme {
+    color: var(--title-color);
 }
 
 /*=============== Link activo ===============*/
@@ -489,7 +559,7 @@ input, button {
 .value__accordion-item {
     background-color: var(--body-color);
     border: 2px solid var(--border-color);
-    border-radius: 5rem;
+    border-radius: .5rem;
     padding: 1rem .75rem;
 }
 

@@ -20,7 +20,7 @@ var swiperPopular = new Swiper(".popular__container", {
     },
 });
 
-/*=============== VALUE ACCORDION ===============*/
+/*=============== ACORDION DE VALOR ===============*/
 const accordionItems = document.querySelectorAll('.value__accordion-item')
 
 accordionItems.forEach((item) => {
@@ -48,7 +48,7 @@ const toggleItem = (item) => {
     }
 }
 
-/*=============== DESPLAZARSE POR SECCIONES ENLACE ACTIVO ===============*/
+/*=============== DESPLAZARSE POR SECCIONES CON ENLACE ACTIVO ===============*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive() {
@@ -77,6 +77,34 @@ function scrollUp() {
 }
 window.addEventListener('scroll',scrollUp)
 
-/*=============== DARK LIGHT THEME ===============*/
+/*=============== TEMA OSCURO ===============*/
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-sun'
+
+// Tema seleccionado previamente (si está seleccionado por el usuario)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// Obtenemos el tema actual que tiene la interfaz validando la clase de dark-theme
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+
+// Validamos si el usuario eligió previamente un tema
+if (selectedTheme) {
+    // Si se cumple la validación preguntamos cuál fue el problema para saber si activamos o desactivamos el tema oscuro
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activar/Desactivar el tema manualmente con el botón
+themeButton.addEventListener('click', () => {
+    // Agregar o remover el tema oscuro/icono
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // Guardamos el tema y el icono actual que el eligió usuario.
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
