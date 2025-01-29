@@ -203,7 +203,7 @@ body.dark-theme {
 }
 
 .main {
-    overflow: hidden;
+    overflow: hidden; /* Para la animación de ScrollReveal */
 }
 
 /*=============== HEADER y NAV ===============*/
@@ -890,7 +890,7 @@ body.dark-theme {
 
 /*=============== BREAKPOINTS ===============*/
 /* Para dispositivos pequeños  */
-@media screen and (max-width: 361px){
+@media screen and (max-width: 350px){
     .container {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -959,7 +959,6 @@ body.dark-theme {
     .footer__container {
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
-
     }
 }
 
@@ -1146,4 +1145,26 @@ body.dark-theme {
     }
 }
 
+@media screen and (min-width: 1040px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home__container {
+        column-gap: 4rem ;
+    }
+}
+
 /* Para resolución 2k y 4k  */
+@media screen and (min-width: 2048px) {
+    body {
+        zoom: 1.5;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    body {
+        zoom: 2;
+    }
+}
